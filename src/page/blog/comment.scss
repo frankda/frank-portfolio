@@ -1,0 +1,194 @@
+@import '~@c/globalcss/color.scss';
+
+.reaction {
+  &-box {
+    margin: 40px auto;
+    width: 260px;
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  &-up, &-like {
+    box-sizing: border-box;
+    width: 118px;
+    height: 72px;
+    padding-top: 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #f7f7f7;
+    i {
+      display: block;
+      width: 100%;
+      height: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
+    span {
+      font-size: 12px;
+      font-weight: bolder;
+      margin-top: 10px;
+      color: #666;
+    }
+  }
+  &-up {
+    float: left;
+    &:hover {
+      opacity: 0.8;
+    }
+    i {
+      background-image: url('http://cdn.toofook.com/my-blog/icon/up-n.png')
+    }
+    &-active{
+      background-color: $color_main;
+      i {
+        background-image: url('http://cdn.toofook.com/my-blog/icon/up-d.png')
+      }
+      span {
+        color: #fff
+      }
+    }
+  }
+  &-like {
+    float: right;
+    &:hover {
+      opacity: 0.8;
+    }
+    i {
+      background-image: url('http://cdn.toofook.com/my-blog/icon/like-n.png')
+    }
+    &-active{
+      background-color: $color_pink;
+      i {
+        background-image: url('http://cdn.toofook.com/my-blog/icon/like-d.png')
+      }
+      span {
+        color: #fff
+      }
+    }
+  }
+}
+
+.comment {
+  &-form {
+    width: 100%;
+    padding-top: 35px;
+    border-top: 1px solid #eaeaea;
+    &-submit {
+      display: block;
+      width: 140px;
+      height: 45px;
+      box-sizing: border-box;
+      background-color: #f95f56;
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 24px;
+      margin-left: 50px;
+      margin-top: 14px;
+      position: relative;
+    }
+    &-loading{
+      opacity: 0.5;
+      color: #f95f56;
+      &::before{
+        content: '';
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+      }
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        top: 50%;
+        margin-top: -4px;
+        left: 50%;
+        margin-left: -15px;
+        background-color: #f95f56;
+        z-index: 2;
+        animation: submitLoading .4s linear infinite running;
+        transform-origin: 15px center
+      }
+    }
+  }
+  &-view {
+    margin-top: 40px;
+  }
+  &-item {
+    width: 100%;
+    margin: 18px 0;
+    font-family: $art_font;
+    &-img {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #f7f7f7;
+      background-position: center;
+      background-size: contain;
+      float: left;
+    }
+    &-box {
+      margin-left: 50px;
+    }
+    &-context {
+      border-radius: 20px;
+      background-color: #f7f7f7;
+      padding: 15px 15px 10px 15px;
+      box-sizing: border-box;
+      h3 {
+        font-size: 16px;
+        font-weight: bold;
+        color: #111;
+        span {
+          font-size: 12px;
+          color: #ccc;
+          margin-left: 12px;
+          font-weight: 100        
+        }
+      }
+      article {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 6px;
+        color: #666;
+        word-break:break-all
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px){
+  .reaction-box {
+    transform-origin: center;
+    transform: scale(0.8)
+  }
+}
+
+@keyframes submitLoading {
+  0%{
+    transform: rotate(0deg)
+  }
+
+  50%{
+    transform: rotate(180deg)
+  }
+
+  100%{
+    transform: rotate(360deg)
+  }
+}
