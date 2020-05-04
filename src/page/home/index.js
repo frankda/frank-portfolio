@@ -5,7 +5,7 @@ import Switch from '@c/switch'
 import MyIcon from './components/icons'
 import Model from '@c/model'
 /**
- * 页面入口主组件
+ * homepage component
  */
 
 export default class Home extends Component{
@@ -23,7 +23,7 @@ export default class Home extends Component{
     this.upload = 0
   }
   componentWillMount(){
-    // 组件加载时查看Cookie是否有保存用户信息
+    // check if cookie save user information or not
     let email = this.getCookie("testEmali")
     if(email){
       let name = this.getCookie("testName")
@@ -37,7 +37,7 @@ export default class Home extends Component{
   }
 
   /**
-   * 获取kookie
+   * get cookie
    * @param {string} name 
    */
   getCookie(name) 
@@ -54,7 +54,7 @@ export default class Home extends Component{
         document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/";
   }
   /**
-   * 保存用户信息至state（子组件注册成功调用）
+   * save user info to state（subcomponent invoke successfully）
    * @param {object} opt 
    */
   setLoading(opt){
@@ -72,7 +72,7 @@ export default class Home extends Component{
     }) 
     this.refs.model.show()
   }
-  // 页面切换动画控制
+  // control animation between page switching
   switchOut(n){
     this.setState({
       switchin:n

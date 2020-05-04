@@ -10,16 +10,16 @@ import FastClick from 'fastclick'
 FastClick.attach(document.body);
 
 
-// 预加载图片
+// preload image
 var myloadingimgs = []
 for(let i in imgUrls){
   myloadingimgs.push(imgUrls[i])
 }
 
-// loading动画dom
+// loading animation dom
 var loadingDiv = document.getElementById('pageloading')
 
-// 判断浏览器兼容前缀
+// check browser campatibility
 var useTransform
   = (loadingDiv.style['msTransform'] && 'msTransform')
   || (loadingDiv.style['webkitTransform'] && 'webkitTransform')
@@ -27,16 +27,16 @@ var useTransform
   || (loadingDiv.style['OTransform'] && 'OTransform') 
   || 'transform';
 
-var imgloadindex = 0 // 已经加载图片数量
+var imgloadindex = 0 // Loaded image quantities
 
-var imgNum = 0 // 图片总数
+var imgNum = 0 // Total image quantities
 
 myloadingimgs.map(urls => {
   for (let i in urls) {
     imgNum ++
     let img = new Image()
     img.onload = () => {
-      // 当图片加载成功时，计数加一
+      // count plus 1 when image successful loaded
       imgloadindex++
       reactloading()
     }

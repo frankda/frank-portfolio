@@ -7,7 +7,7 @@ import checkText from '@/utils/checkText'
 const checkMail = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/; 
 
 /**
- * @name 邮箱登陆组件
+ * @name emaillogin
  */
 export default class SginIn extends Component{
   constructor(){
@@ -20,11 +20,11 @@ export default class SginIn extends Component{
     }
     this.email = null
   }
-  // 邮箱地址请求
+  // request email address
   getUser(dom){
-    if(this.state.erro) return false; // 判断是否在执行错误提示的动画
+    if(this.state.erro) return false; // animation for checking if there is error or not
     const value = dom.value.toString().replace(/<|>/g,' ')
-    if(!checkMail.test(value)) return this.upErro("请输入正确的邮箱地址!")  
+    if(!checkMail.test(value)) return this.upErro("Please enter correct email!")  
     axios.get('u/getUser/', {
       params: {
         email: value
@@ -49,11 +49,11 @@ export default class SginIn extends Component{
     });
   }
 
-  // 获取用户名请求注册接口
+  // register
   getName(dom){
     if(this.state.erro) return false;
     const value = dom.value.toString().replace(/<|>/g,' ')
-    if(!this.CheckTexts(value)) return this.upErro("禁止使用敏感词汇！")
+    if(!this.CheckTexts(value)) return this.upErro("No Dirty Words Please")
      axios.post('u/saveUser/', {
          email: this.email,
          name: value},{
@@ -71,14 +71,15 @@ export default class SginIn extends Component{
        this.props.isErro()
      });   
   }
-  // 敏感词检测
+  
   CheckTexts(str){
     for(let i = 0; i - checkText.length;i++){
      if(str.indexOf(checkText[i])>-1) return false 
     }
     return true
   } 
-  // 注册或登陆成功，将保存用户名和email账号
+
+  // save user's account if user register or sign in
   isOk(name,email){
     this.props.setUser({
       name: name,
@@ -102,10 +103,10 @@ export default class SginIn extends Component{
     return(  
     <div className={sginDiv}>
       <img src={statu? homeImg.smile: homeImg.mail} alt=""/>
-      <h1>{statu?'第一次来吧，取个名呗':'邮箱地址登陆'}</h1>
-      <p>{statu?'净化荧屏，世界和平。请勿使用敏感词汇':'邮箱地址是您的唯一标示，认真点啊'}</p>
+      <h1>{statu?'First time here? What is your name':'Sign In by Email'}</h1>
+      <p>{statu?'PLEASE DO NOT USE DIRTY WORDS':'Please take your email serious'}</p>
       <div className={sginInput}>
-        <input type="text" placeholder={statu?"请输入用户名":"请输入您的邮箱"} ref="inputer"/>
+        <input type="text" placeholder={statu?"Enter username":"Enter email"} ref="inputer"/>
         {statu
         ?<button className={this.state.erro?buttonAnimate:''} onClick={this.getName.bind(this, this.refs.inputer)}>OK</button>
         :<button className={this.state.erro?buttonAnimate:''} onClick={this.getUser.bind(this, this.refs.inputer)}>OK</button>}

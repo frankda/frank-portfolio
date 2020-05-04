@@ -8,7 +8,7 @@ import {figureBox} from '../../home.scss'
 import SupPug from '../suppug'
 import axios from '@/axios'
 /**
- * @name 首页图标组件
+ * @name icons for homepage
  */
 export default class MyIcon extends Component{
   constructor(props){
@@ -16,7 +16,7 @@ export default class MyIcon extends Component{
     this.state = {
       figures:[
         { src: homeIcon.sup, 
-          text: '点赞', 
+          text: 'Like', 
           isShow: false,
           unmove:true, 
           child: SupPug,
@@ -25,9 +25,9 @@ export default class MyIcon extends Component{
             num:0,
             upSup:this.upSup.bind(this)}
         },
-        { src: homeIcon.readme, text: '说明', isShow: false, child: ShowMe,type:'main'},
-        { src: homeIcon.msg, text: '留言', isShow: false, child: Msgs,type:'wathet'},
-        { src: homeIcon.setting, text: '设置', isShow: false, child: Setting,type:'setting'}
+        { src: homeIcon.readme, text: 'Detail', isShow: false, child: ShowMe,type:'main'},
+        { src: homeIcon.msg, text: 'Message', isShow: false, child: Msgs,type:'wathet'},
+        { src: homeIcon.setting, text: 'Setting', isShow: false, child: Setting,type:'setting'}
       ]
     }
     this.upload = 0
@@ -37,7 +37,7 @@ export default class MyIcon extends Component{
     this.getSups()
   }
   getSups(){
-    if(this.upload === 3) return; //最多请求三次，还是错误就不请求了
+    if(this.upload === 3) return; //Can apply only 3 times
     axios.get('u/showSup/').then(response => {
       if(response.data.status === 1){
         this.setSup(response.data.data.supNum)
@@ -48,7 +48,7 @@ export default class MyIcon extends Component{
     }).catch(err=>console.log(err))
   }
   upSup(){
-    if(this.axiosUp === 3) return; //最多请求三次，还是错误就不请求了
+    if(this.axiosUp === 3) return; //Can apply only 3 times
     axios.get('u/upSup/').then(response => {
       if(response.data.status === 1){
         this.setSup.call(this,response.data.data)
