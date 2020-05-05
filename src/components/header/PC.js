@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 
 
 /**
- * @name 导航栏组件
+ * @name navigator
  */
 
 function PollyTime(t){
@@ -23,15 +23,14 @@ export default class Header extends Component{
         {indent:false,text:'WORK',herf:'/work'},
         {indent:false,text:'ABOUT',herf:'/about'}
       ],
-      now: TimeNow(), //当前index，用来避免重复点击当前nav引起的页面切换效果
+      now: TimeNow(), //current index, used to avoid clicking for multiple times
     }
   }
   componentDidMount(){
     setInterval(this.timeRe.bind(this),1000)
   }
   componentWillMount(){
-    // 组件渲染前 判断当前location为第几个，为第几个导航添加active样式
-    let paths = []
+    // check which location it is, add style for nth location
     this.state.nav.map((i)=>paths.push(i.herf.toString())) 
     let path = this.props.history.location.pathname.toString();
     let index = paths.indexOf(path)> -1 ? paths.indexOf(path) : 1
@@ -47,7 +46,7 @@ export default class Header extends Component{
     });
   }
   toLink(n,event){
-    // if(n.text==='BLOG')return window.location.href='http://blog.vanoc.top'
+    // if(n.text==='BLOG')return window.location.href='http://frankda.info'
     const index = this.state.nav.indexOf(n)
     if(index===this.state.now)return;
     this.handleIndex(index)
@@ -73,7 +72,7 @@ export default class Header extends Component{
             </a>))}
           </nav>
           <div className="times">
-            <a target="_blank" href="https://github.com/ArthurYung"><img src={this.props.git} alt=""/></a>
+            <a target="_blank" href="https://github.com/frankda"><img src={this.props.git} alt=""/></a>
             <time>{this.state.time}</time>
           </div>
         </div>

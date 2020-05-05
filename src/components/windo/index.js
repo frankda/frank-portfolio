@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 
 /**
- * @class 图标弹窗组件
- * props.noClose  是否有关闭按钮
- * props.unmove 是否可拖动
- * props.title 标题文本
- * props.type 颜色样式
+ * @class PopupWindowComponent
+ * props.noClose  can close
+ * props.unmove draggable
+ * props.title 
+ * props.type color type
  * 
  */
 export default class PopSelf extends Component {
   constructor() {
     super()
     this.isMove = false
-    this.positions = { //弹窗的位置
+    this.positions = { //window location
       left:0,
       top:0,
       constx:0,
@@ -33,7 +33,7 @@ export default class PopSelf extends Component {
     let pops = this.refs.pops.getBoundingClientRect()
     this.positions.w = pops.width
     this.positions.h = pops.height
-    this.positions.constx = event.clientX - pops.left // 因为弹窗用translate(-50%)来居中，所以posiiton需要减去宽高一半
+    this.positions.constx = event.clientX - pops.left // center by using translate(-50%), so need to minus half of width and height
     this.positions.consty = event.clientY - pops.top  
     this.isMove = true
   }
@@ -49,13 +49,13 @@ export default class PopSelf extends Component {
   }
   render() {
     const title = ()=>{
-      if(this.props.type !== 'none'){ // 如果元素类别不是none（专用点赞），则渲染标题
+      if(this.props.type !== 'none'){ 
           if(this.props.noClose) return <p>{this.props.title}</p> 
           return <p 
           onMouseDown={this.props.unmove?()=>{}:this.handleDown.bind(this)}
           onMouseUp={this.props.unmove?()=>{}:this.handleUp.bind(this)}
           style={{cursor:this.props.unmove?'auto':''}}
-          ><a onClick={this.props.close} title="关闭"></a>{this.props.title}</p> 
+          ><a onClick={this.props.close} title="Close"></a>{this.props.title}</p> 
       }
     }
     let myClass = this.props.noClose ? `figure-pop-about figure-style-${this.props.type}`: `figure-pop figure-style-${this.props.type}`
@@ -66,7 +66,7 @@ export default class PopSelf extends Component {
       <div ref="pops" 
         className={myClass}>
         {title()}
-        {this.props.children}  {/*子元素*/}
+        {this.props.children}  {/*child component*/}
       </div>)
   }
 } 

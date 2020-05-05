@@ -2,10 +2,10 @@ import React from 'react';
 import {createPortal} from 'react-dom';
 
 /**
- * @name 警示弹窗
- * @props.type 弹窗种类 'ok' || 'err'
- * @props.time 弹窗持续时间 :Number<String>
- * @props.close 弹窗关闭方法 :Function
+ * @name alert
+ * @props.type alert type 'ok' || 'err'
+ * @props.time alert duration :Number<String>
+ * @props.close alert close :Function
  */
 export default class MyPortal extends React.Component {
   constructor() {
@@ -23,9 +23,9 @@ export default class MyPortal extends React.Component {
   render() {
     return createPortal(
       <div className={`model-pop model-${this.props.type}`}>
-        <h1>{this.props.text || (this.props.type==='ok'? '账号绑定成功':'请求错误，请重试')}</h1>
-      </div>, //塞进传送门的JSX
-      this.node //传送门的另一端DOM node
+        <h1>{this.props.text || (this.props.type==='ok'? 'Success':'Request error, Retry')}</h1>
+      </div>, 
+      this.node
     );
   }
 

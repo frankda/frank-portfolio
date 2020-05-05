@@ -2,7 +2,7 @@ import React from 'react';
 import {createPortal} from 'react-dom';
 
 /**
- * @name 弹窗传送门
+ * @name PopupWindow
  */
 export default class MyPortal extends React.Component {
   constructor() {
@@ -19,8 +19,8 @@ export default class MyPortal extends React.Component {
       <div  onMouseMove={this.clearboth} className="dialog">
           <div onMouseDown={this.clearboth} className="dialog-bg"></div>
         {this.props.children}
-      </div>, // 塞进传送门的JSX
-      this.node // 传送门的另一端DOM node
+      </div>,
+      this.node
     );
   }
 
