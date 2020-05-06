@@ -142,8 +142,8 @@ const aiHtml = Prism.highlight(text.ai,Prism.languages.javascript, 'javascript')
 export default () => {
     return(
       <article className="work-pop-main work-pop-code">
-        <h1>使用JS实现五子棋人机对战</h1>
-        <p>js入门练习</p>
+        <h1>A simple dynamic Tic Tac Toe game</h1>
+        <p>js practice</p>
         <LazyImg w="800px" h="800px" src={gameImg}/>
         <h5>初始化</h5>
         <p>创建棋盘数组和玩家赢法数组，在棋盘数组内添加落子方法</p>

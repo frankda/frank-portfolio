@@ -47,7 +47,7 @@ export default class Icon extends Component{
                 unmountOnExit
                 classNames="figure">
                 <Pop close={this.props.close} type={this.props.type} title={this.props.text} unmove={this.props.unmove}>
-                  <Component close={this.props.close} other={this.props.other} add={this.props.add}/> 
+                  <Component /> 
                 </Pop> 
         </CSSTransition>
     </div>

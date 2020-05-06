@@ -31,6 +31,7 @@ export default class Header extends Component{
   }
   componentWillMount(){
     // check which location it is, add style for nth location
+    let paths = [];
     this.state.nav.map((i)=>paths.push(i.herf.toString())) 
     let path = this.props.history.location.pathname.toString();
     let index = paths.indexOf(path)> -1 ? paths.indexOf(path) : 1

@@ -17,7 +17,7 @@ export default class IconPor extends React.Component {
       <Windo {...this.props}>
         {this.props.children}
       </Windo>,
-      this.node // 传送门的另一端DOM node
+      this.node
     );
   }
 
