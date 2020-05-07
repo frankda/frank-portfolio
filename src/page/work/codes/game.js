@@ -145,8 +145,8 @@ export default () => {
         <h1>A simple dynamic Tic Tac Toe game</h1>
         <p>js practice</p>
         <LazyImg w="800px" h="800px" src={gameImg}/>
-        <h5>初始化</h5>
-        <p>创建棋盘数组和玩家赢法数组，在棋盘数组内添加落子方法</p>
+        <h5>Initiate</h5>
+        <p>Create gaming board and winning condition check</p>
         <pre className="language-javascript" dangerouslySetInnerHTML={{__html:initHtml}}></pre> 
         <p style={{marginTop:'1.6rem'}}>创建棋盘赢法统计三维数组，遍历棋盘内每个点，该点每个方向连成5个子为一种方法，便利该方法下的5个点设为true作为标记,并统计赢法总和。</p>
         <pre className="language-javascript" dangerouslySetInnerHTML={{__html:mainHtml}}></pre> 
