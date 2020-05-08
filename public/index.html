@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link type="image/x-icon" rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <title>Frank's Personal Portfolio</title>
+    <meta name="keywords" content="portfolio,frontend,react,frank" />
+    <meta name="description" content="Frank's personal portfolio site" />
+    <style>
+      body{
+        background: #4c5ea2
+      }
+      #pageloading{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100vw;
+        height: 100vh;
+        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+        transform-origin: left;
+        -webkit-transform-origin: left;
+        background-color: #ffd03f;
+        -webkit-transition: -webkit-transform .15s ;
+        transition: -webkit-transform .15s ;
+        -o-transition: transform .15s ;
+        transition: transform .15s ;
+        transition: transform .15s , -webkit-transform .15s ;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but Frank doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="root"></div>
+    <div id="pageloading"></div>
+  </body>
+</html>
