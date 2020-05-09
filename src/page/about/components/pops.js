@@ -14,7 +14,7 @@ export function Photo(){
   return (
     <Pop  
       noClose={true}
-      title="Phonto"
+      title="Photo"
       type="main"
       unmove={true}
     >

@@ -11,7 +11,7 @@ const labels = [
                  '#90s',
                  '#Guitar',
                  '#Elvis',
-                 'Chief',
+                 '#foodie',
                  '#Thinker',
                 ]
 
