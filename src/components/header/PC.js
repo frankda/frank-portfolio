@@ -19,7 +19,7 @@ export default class Header extends Component{
     this.state = {
       nav:[
         {indent:true,text:'HOME',herf:'/'},
-        {indent:false,text:'BLOG',herf:'/blog'},
+        // {indent:false,text:'BLOG',herf:'/blog'},
         {indent:false,text:'WORK',herf:'/work'},
         {indent:false,text:'ABOUT',herf:'/about'}
       ],

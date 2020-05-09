@@ -85,12 +85,12 @@ export function WeiChart(){
   return (
     <Pop  
       noClose={true}
-      title="WeChat"
+      title="LinkedIn"
       type="wathet"
       unmove={true}
     >
       <div className={Css.img}>
-        <img src={aboutImg.icode} alt=""/>
+        <img src="/linkedinlogo.png" alt=""/>
       </div> 
       <h3>https://www.linkedin.com/in/frankda/</h3>
       <a href="https://www.linkedin.com/in/frankda/" rel="external" target="_blank" className={Css.linkIcon}></a>
@@ -121,11 +121,18 @@ export function OurLink(){
   return (
     <Pop  
       noClose={true}
-      title="Friends"
+      title="About Me"
       type="pink"
       unmove={true}
     >
-     <Friends/>
+     <div className={Css.aboutMe}>
+        <p>I am a freshly-minted junior developer based in Sydney, Australia.</p>
+        <br />
+        <p>I have 2 years experience working and managing projects in the construction industry... coincidentally the same amount of time it took me to realise that playing with computers is infinitely more fun than playing with concrete.</p>
+        <br />
+        <p>
+        I have always been obsessed with technology and I love to create things. Learning to program has opened up a world of new ways for me to be creative and build cool stuff.</p>
+     </div> 
     </Pop>
   )
 }

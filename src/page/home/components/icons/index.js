@@ -15,18 +15,18 @@ export default class MyIcon extends Component{
     super(props)
     this.state = {
       figures:[
-        { src: homeIcon.sup, 
-          text: 'Like', 
-          isShow: false,
-          unmove:true, 
-          child: SupPug,
-          type:'none', 
-          add:{
-            num:0,
-            upSup:this.upSup.bind(this)}
-        },
-        { src: homeIcon.readme, text: 'Detail', isShow: false, child: ShowMe,type:'main'},
-        { src: homeIcon.msg, text: 'Message', isShow: false, child: Msgs,type:'wathet'},
+        // { src: homeIcon.sup, 
+        //   text: 'Like', 
+        //   isShow: false,
+        //   unmove:true, 
+        //   child: SupPug,
+        //   type:'none', 
+        //   add:{
+        //     num:0,
+        //     upSup:this.upSup.bind(this)}
+        // },
+        // { src: homeIcon.readme, text: 'Detail', isShow: false, child: ShowMe,type:'main'},
+        // { src: homeIcon.msg, text: 'Message', isShow: false, child: Msgs,type:'wathet'},
         { src: homeIcon.setting, text: 'Setting', isShow: false, child: Setting,type:'setting'}
       ]
     }

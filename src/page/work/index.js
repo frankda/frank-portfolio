@@ -55,8 +55,8 @@ export default class Work extends Component{
   }
   toAbout(){
     isPhone 
-    ? document.querySelector(".mobile-nav").getElementsByTagName("a")[3].click() 
-    : document.querySelector(".nav").getElementsByTagName("a")[3].click() // Jump to about page
+    ? document.querySelector(".mobile-nav").getElementsByTagName("a")[2].click() 
+    : document.querySelector(".nav").getElementsByTagName("a")[2].click() // Jump to about page
   }
   render(){
     const type = this.state.types
