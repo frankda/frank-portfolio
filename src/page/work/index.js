@@ -16,7 +16,7 @@ export default class Work extends Component{
     this.state={
     codeFigu:
     [
-        { src: 'https://frankda-portfolio.s3-ap-southeast-2.amazonaws.com/game.png', text: 'Tic Tac Toe', isShow: false, child: code.game,type:'white'},
+        { src: '/icons/game.png', text: 'Tic Tac Toe', isShow: false, child: code.game,type:'white'},
         { src: workIcon.jquo, text: 'Market Campagin', isShow: false, child: code.jquo,type:'white'},
         { src: workIcon.pictring, text: 'Story Map', isShow: false, child: code.pictring,type:'white'},
         { src: workIcon.chick, text: 'Price Comparison', isShow: false, child: code.chicken,type:'white'},

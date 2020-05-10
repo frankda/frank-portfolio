@@ -3,7 +3,7 @@ import Cloud from './cloud'
 import {mylabel} from '../about.scss'
 
 /**
- * @name AboutMe云朵集组件
+ * @name AboutMeCloud
  */
 
 const labels = [
