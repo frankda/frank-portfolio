@@ -50,8 +50,8 @@ const comHtml = Prism.highlight(text.com,Prism.languages.javascript, 'javascript
 export default ()=> {
   return(
     <article className="work-pop-main work-pop-code">
-      <h1>My Personal Blog</h1>
-      <p>React Blog</p>
+      <h1>My Personal Portfolio Site</h1>
+      <p>React Project</p>
       <p>Use create-react-app skyfold. Configuration of eject,webpack is in node_modules/react-script/config</p>
       <pre className="language-javascript" dangerouslySetInnerHTML={{__html:creatHtml}}></pre>
       <h5>Router</h5>
@@ -64,7 +64,6 @@ export default ()=> {
       <p>I really like react component, here is a breif introduction of how realise popup window</p>
       <p>Most of time the popup window is taken out of dom and append to the bottom of body (z-index only works for sibling dom element), it costs a lot if we change dom directly and virtual dom may cause unexpected results. So need to use createPortal here (remove created element when component unloaded)</p>
       <pre className="language-javascript" dangerouslySetInnerHTML={{__html:comHtml}}></pre>
-      {/* <p style={{marginTop:'1.6rem'}}>完整代码：</p> */}
     </article>
   )
 }

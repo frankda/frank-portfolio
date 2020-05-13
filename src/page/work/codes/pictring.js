@@ -10,6 +10,8 @@ export default ()=> {
     <article className="work-pop-main work-pop-code">
       <h1>Storymap</h1>
       <p>A map app, user can pin their comments on map</p>
+      <PopLink gitLink={true} href="https://github.com/frankda/story-map"/>
+      <PopLink gitLink={false} href="https://frank-n-maria-story-map.herokuapp.com/"/>
       <h5>Stacks</h5>
       <ol className="work-list">
         <li><span>Ruby on Rails</span></li>
@@ -19,13 +21,11 @@ export default ()=> {
       </ol>
       <LazyImg w="800px" h="800px" src={pictring1}/>
       <p>All user and comments information are stored in PostgreSQL, user can also edit their own comments and check others' comments</p>
-      <p>Live site: <a href="https://frank-n-maria-story-map.herokuapp.com" target="_blank">https://frank-n-maria-story-map.herokuapp.com</a></p>
       <h5>Improvement in the future</h5>
       <p>1. Allow user to comment and like other's comments</p>
       <p>2. Add follow and favorite function, make it as a social platform, user can share their favorites with others using a share link.</p>
       <p>3. Add search funciton, user can seach location, keywords</p>
       <p>4. Combine comments together when zoom out</p>
-      <PopLink href="https://github.com/frankda/story-map"/>
     </article>
   )
 }

@@ -61,12 +61,18 @@ export default ()=>{
   return(
     <article className="work-pop-main work-pop-code">
       <h1>Market Research Tool for Company Ads</h1>
-      <p>Stack: Ruby on Rails, PostgreSQL, React</p>
+      <p>A small app allow company post their ads on. Participants can check select which ads they have seen.</p>
+      <PopLink gitLink={true} href = "https://github.com/joshpanebianco/improved-guide"/>
+      <PopLink gitLink={false} href = "https://campaign-ads-markt.netlify.app"/>
+      <h5>Stacks</h5>
+      <ol className="work-list">
+          <li><span>Ruby on Rails</span></li>
+          <li><span>PostgreSQL</span></li>
+          <li><span>React</span></li>
+      </ol>
       <LazyImg w="800px" h="800px" src="/gifs/market-survey.gif" />
       <h5>Introduction</h5>
-      <p>A small app allow company post their ads on. Participants can check select which ads they have seen.</p>
-      <p>Live webite: <a href="https://campaign-ads-markt.netlify.app" target="_blank">https://campaign-ads-markt.netlify.app</a></p>
-      <PopLink href = "https://github.com/frankda/improved-guide"/>
+      <p>This is a full stack teamwork project, I was responsible for building backend, creating models and providing API for front end.</p>
     </article>
   )
 }

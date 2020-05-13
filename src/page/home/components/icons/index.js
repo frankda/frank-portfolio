@@ -27,7 +27,7 @@ export default class MyIcon extends Component{
         // },
         // { src: homeIcon.readme, text: 'Detail', isShow: false, child: ShowMe,type:'main'},
         // { src: homeIcon.msg, text: 'Message', isShow: false, child: Msgs,type:'wathet'},
-        { src: homeIcon.setting, text: 'Setting', isShow: false, child: Setting,type:'setting'}
+        { src: homeIcon.setting, text: 'Settings', isShow: false, child: Setting,type:'setting'}
       ]
     }
     this.upload = 0

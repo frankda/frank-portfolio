@@ -116,12 +116,12 @@ export function MyAdd(){
 }
 
 
-// friends link
+// My Story
 export function OurLink(){
   return (
     <Pop  
       noClose={true}
-      title="About Me"
+      title="My Story"
       type="pink"
       unmove={true}
     >

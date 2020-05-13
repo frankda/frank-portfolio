@@ -17,10 +17,10 @@ export default class Work extends Component{
     codeFigu:
     [
         { src: '/icons/game.png', text: 'Tic Tac Toe', isShow: false, child: code.game,type:'white'},
-        { src: workIcon.jquo, text: 'Market Campagin', isShow: false, child: code.jquo,type:'white'},
+        { src: workIcon.jquo, text: 'Market Campaign', isShow: false, child: code.jquo,type:'white'},
         { src: workIcon.pictring, text: 'Story Map', isShow: false, child: code.pictring,type:'white'},
         { src: workIcon.chick, text: 'Price Comparison', isShow: false, child: code.chicken,type:'white'},
-        { src: workIcon.blog, text: 'My Blog', isShow: false, child: code.myblog,type:'white'},
+        { src: workIcon.blog, text: 'Portfolio', isShow: false, child: code.myblog,type:'white'},
     ],
     switchin:true
     }
@@ -68,7 +68,7 @@ export default class Work extends Component{
             <span className={moreIcon}>
               <i></i>
             </span>
-            <span className="needsclick">VIEW MORE</span>
+            <span className="needsclick">About Me</span>
           </div>
           {this.state.switchin?<Switch type="enter" callback={this.switchOut}/>:''}
         </div>

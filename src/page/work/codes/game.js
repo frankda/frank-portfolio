@@ -135,7 +135,15 @@ export default () => {
     return(
       <article className="work-pop-main work-pop-code">
         <h1>A simple dynamic Tic Tac Toe game</h1>
-        <p>js practice, stacks: html5, css3, javascript</p>
+        <p>A scalable vanilla javascript written game</p>
+        <PopLink gitLink={true} href='https://github.com/frankda/tic-tac-toe'/>
+        <PopLink gitLink={false} href='https://frankda.github.io/tic-tac-toe/'/>
+        <h5>Stacks</h5>
+        <ol className="work-list">
+            <li><span>HTML5</span></li>
+            <li><span>CSS3</span></li>
+            <li><span>Vanilla Javascript</span></li>
+        </ol>
         <LazyImg w="800px" h="800px" src="/gifs/tic-tac-toe.gif" />
         <h5>Initiate</h5>
         <p>Create gaming board and winning condition check</p>
@@ -148,7 +156,6 @@ export default () => {
         <p style={{marginTop:'1.6rem'}}>It's a small javascript project, important is how to make the game flexible and change winning condition dynamic. There are still few things can be improved:</p>
         <p>1. Add AI algorithem and it can suit 4x4 or 5x5 gaming board.</p>
         <p>2. If the gaming board dimension is larger than 5x5, the winning condition should follow game gomoku.</p>
-        <PopLink href='https://github.com/frankda/tic-tac-toe'/>
       </article>
     )
 };

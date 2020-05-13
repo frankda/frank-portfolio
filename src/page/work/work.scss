@@ -10,6 +10,11 @@
   height: 100vh;
 }
 
+article > ol > li {
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+
 .figureBox{
   position: relative;
   z-index: 800;

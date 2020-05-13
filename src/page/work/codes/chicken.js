@@ -69,22 +69,22 @@ export default ()=>{
     <article className="work-pop-main work-pop-code">
       <h1>Price Comparison</h1>
       <p>A web crawler to scrape price for the same product from different online grocery store</p>
-      <LazyImg w="320px" h="572px" src="/gifs/price-comparison.gif"/>
+      <PopLink gitLink={true} href="https://github.com/frankda/price-comparison-client"/>
+      <PopLink gitLink={true} href="https://github.com/frankda/price-comparision-server"/>
+      <PopLink gitLink={false} href="https://price-to-price.netlify.app/"/>
       <h5>Stacks</h5>
       <ol className="work-list">
         <li><span>React</span></li>
         <li><span>Expressjs</span></li>
         <li><span>MongoDB</span></li>
       </ol>
+      <LazyImg w="320px" h="572px" src="/gifs/price-comparison.gif"/>
       <p>This is a full stack project, currently, only supports scraping products from Chemist Warehouse</p>
       <p>Use <strong>superagent</strong> to send request to target server and use <strong>cheerio</strong> to parse page source and extract information</p>
-      <p>Live site: <a href="https://price-to-price.netlify.app" target="_blank">https://price-to-price.netlify.app</a></p>
       <h5>To Do:</h5>
       <p>1. Supports searching products from priceline</p>
       <p>2. Add user signup and sign in function using passportjs</p>
       <p>3. Improve accessibility</p>
-      <PopLink href="https://github.com/frankda/price-comparison-client"/>
-      <PopLink href="https://github.com/frankda/price-comparision-server"/>
     </article> 
   )
 }
