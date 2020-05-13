@@ -16,6 +16,10 @@
       border-right: $b_border;
       display: block;
       line-height: 64px;
+      a{
+        color: white;
+        text-decoration: none;
+      }
       b{
         color: $color_main;
       }
