@@ -4,7 +4,7 @@ import React from 'react';
 import MyLoadingComponent from './RouterLoading'
 
 /**
- * @name 路由配置 
+ * @name RouteSetting
  */
 
 // home
@@ -28,7 +28,7 @@ const AsyncAbout = Loadable({
     loading: MyLoadingComponent
 });
 
-// 404页面
+// 404
 const AsyncErro = Loadable({
     loader: () => import('../page/notfind'),
     loading: MyLoadingComponent
