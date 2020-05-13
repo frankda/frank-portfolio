@@ -33,20 +33,20 @@ export default class MyIcon extends Component{
     this.upload = 0
     this.axiosUp = 0
   }
-  componentDidMount(){
-    this.getSups()
-  }
-  getSups(){
-    if(this.upload === 3) return; //Can apply only 3 times
-    axios.get('u/showSup/').then(response => {
-      if(response.data.status === 1){
-        this.setSup(response.data.data.supNum)
-      }else{
-        this.getSups()
-        this.upload ++
-      }
-    }).catch(err=>console.log(err))
-  }
+  // componentDidMount(){
+  //   this.getSups()
+  // }
+  // getSups(){
+  //   if(this.upload === 3) return; //Can apply only 3 times
+  //   axios.get('u/showSup/').then(response => {
+  //     if(response.data.status === 1){
+  //       this.setSup(response.data.data.supNum)
+  //     }else{
+  //       this.getSups()
+  //       this.upload ++
+  //     }
+  //   }).catch(err=>console.log(err))
+  // }
   upSup(){
     if(this.axiosUp === 3) return; //Can apply only 3 times
     axios.get('u/upSup/').then(response => {
