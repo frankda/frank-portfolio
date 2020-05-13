@@ -32,7 +32,7 @@ export default class Mobile extends Component{
     if(type)this.timeOut = setTimeout(()=>{this.setState({active: ''})},300)
   }
   toLink(n){
-    // if(n.text==='BLOG')return window.location.href='http://blog.vanoc.top'
+    // if(n.text==='BLOG')return window.location.href='http://frankda.info'
     this.toggleNav(1)
     const index = navlist.indexOf(n)
     if(index===this.state.now)return;
