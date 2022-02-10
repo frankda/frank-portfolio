@@ -36,7 +36,7 @@
     "marked": "^0.6.3",
     "matter-js": "^0.14.2",
     "moment": "^2.25.1",
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
